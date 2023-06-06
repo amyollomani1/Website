@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+    <title>Amy Ollomani AmyO.dev</title>
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' 'unsafe-inline' *.googletagmanager.com *.googleusercontent.com *.googleapis.com *.google-analytics.com">
+    <meta http-equiv="Content-Security-Policy"
+        content="connect-src 'self' *.google-analytics.com *.analytics.google.com *.googletagmanager.com *.googleusercontent.com *.googleapis.com">
+    <meta name="description"
+        content="Amy is a software developer working on creating new games and websites. Amy loves learning about Cloud technologies and Machine learning, as well as building applications which support the user's experience. ">
+    <meta name="author" content="Amy Ollomani">
+    <meta name="generator" content="Eleventy">
+    <meta name="theme-color" content="#000000">
+    <meta property="og:title" content="Amy Ollomani">
+    <meta property="og:description"
+        content="Amy is a software developer working on creating new games and websites. Amy loves learning about Cloud technologies and Machine learning, as well as building applications which support the user's experience. ">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://wassim.dev/assets/images/wassim-chegham-cover.png">
+    <meta property="og:image:width" content="1000">
+    <meta property="og:image:height" content="1000">
+    <meta name="twitter:title" content="wassim.dev">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@manekinekko">
+    <meta name="twitter:description"
+        content="Amy is a software developer working on creating new games and websites. Amy loves learning about Cloud technologies and Machine learning, as well as building applications which support the user's experience. ">
+    <meta name="twitter:image" content="https://wassim.dev/assets/images/wassim-chegham-cover.png">
+    <meta name="twitter:creator" content="@manekinekko">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/fav/dark/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/fav/dark/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/fav/dark/favicon-16x16.png">
+    <link rel="manifest" href="/assets/images/fav/dark/site.webmanifest">
+    <style>
+        @font-face {
+            font-family: Lato;
+            font-style: normal;
+            font-weight: 400;
+            font-display: block;
+            src: local("Lato Regular"), local("Lato-Regular"), url(//themes.googleusercontent.com/static/fonts/lato/v7/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff) format("woff")
+        }
+
+        :root {
+            font-family: Lato, sans-serif
+        }
+
+        ::selection {
+            color: var(--background-color);
+            background-color: var(--text-color)
+        }
+
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color)
+        }
+
+        body {
+            max-width: 60vw;
+            margin: auto
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0
+        }
+
+        .nav-home {
+            position: absolute;
+            top: 20px;
+            text-decoration: none
+        }
+
+        .logo {
+            filter: invert(1)
+        }
+
+        nav.main-nav {
+            z-index: 100;
+            height: 60px;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap
+        }
+
+        nav.main-nav a {
+            text-decoration: none;
+            top: 8px;
+            padding: 8px 12px;
+            color: var(--text-color);
+            line-height: 1.35;
+            border-radius: 3px;
+            position: relative
+        }
+
+        .flex-1 {
+            flex: 1
+        }
+
+        a {
+            color: var(--text-color);
+            transition: opacity .2s ease-in-out;
+            opacity: .84
+        }
+
+        a:hover {
+            opacity: 1
+        }
+
+        section h2 a {
+            padding-right: 6px;
+            opacity: .5
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 0 0
+        }
+
+        .text-container {
+            padding-top: 50px;
+            padding-bottom: 20px
+        }
+
+        .author-container .role,
+        .text-subtitle {
+            opacity: .64;
+            font-size: 1.5rem;
+            color: var(--text-color);
+            letter-spacing: -.51px;
+            margin-top: 4px
+        }
+
+        .author-container .author {
+            font-size: 4rem;
+            color: var(--text-color);
+            letter-spacing: -4.48px;
+            margin: 0;
+            line-height: .8;
+            padding-bottom: 30px
+        }
+
+        .image-container .image-text {
+            opacity: .86;
+            font-size: .9rem;
+            color: #fff;
+            margin-top: -80px;
+            padding: 20px;
+            line-height: 1.7
+        }
+
+        .hero-image {
+            max-width: 100%;
+            margin: auto;
+            transition: filter .5s ease-in-out
+        }
+
+        .hero-image img {
+            width: 290px;
+            aspect-ratio: 1/1
+        }
+
+        .hero-image:hover {
+            filter: none
+        }
+
+        main {
+            padding-top: 100px;
+            margin: auto
+        }
+
+        section.projects {
+            padding-top: 100px
+        }
+
+        section.projects li {
+            opacity: .64;
+            transition: opacity .2s ease-in-out
+        }
+
+        section.projects li:hover {
+            opacity: 1
+        }
+
+        section.projects p {
+            color: var(--text-color);
+            margin-top: 4px
+        }
+
+        footer {
+            text-align: center;
+            padding: 80px 0 20px 0
+        }
+
+        footer nav {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            align-items: center
+        }
+
+        footer .nav-link {
+            padding: 10px
+        }
+
+        .credits {
+            display: flex;
+            flex-direction: column;
+            opacity: .84;
+            transition: opacity .2s ease-in-out;
+            height: 130px;
+            align-items: center;
+            justify-content: center
+        }
+
+        .credits:hover {
+            opacity: 1
+        }
+
+        .mobile-nav {
+            display: none;
+            margin: auto
+        }
+
+        .mobile-nav img {
+            margin: 20px
+        }
+
+        .overlay-button {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            padding: 20px;
+            z-index: 5;
+            cursor: pointer;
+            user-select: none;
+            text-align: justify
+        }
+
+        .overlay-button span,
+        .overlay-button span:after,
+        .overlay-button span:before {
+            height: 1px;
+            width: 30px;
+            background-color: var(--text-color);
+            position: relative;
+            display: block;
+            transition: all .2s ease-in-out
+        }
+
+        .overlay-button span:before {
+            top: -10px;
+            visibility: visible
+        }
+
+        .overlay-button span:after {
+            top: 10px
+        }
+
+        .overlay-button span:after,
+        .overlay-button span:before {
+            content: ""
+        }
+
+        input[type=checkbox] {
+            display: none
+        }
+
+        input[type=checkbox]:checked~.overlay {
+            visibility: visible
+        }
+
+        input[type=checkbox]:checked~.overlay-button span {
+            transform: rotate(-90deg) translateX(-10px);
+            width: 50%;
+            opacity: 1
+        }
+
+        .overlay {
+            height: 100vh;
+            width: 100vw;
+            background: var(--background-color);
+            z-index: 2;
+            visibility: hidden;
+            position: fixed;
+            overflow: hidden;
+            top: 0
+        }
+
+        .overlay.active {
+            visibility: visible
+        }
+
+        .overlay nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            height: 100vh;
+            padding-left: 0
+        }
+
+        .overlay nav a {
+            padding: 1em;
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 1.5em
+        }
+
+        @media only screen and (max-width:900px) {
+            body {
+                max-width: 100vw
+            }
+
+            nav.main-nav {
+                display: none
+            }
+
+            .mobile-nav {
+                display: block
+            }
+
+            footer nav {
+                flex-direction: column;
+                font-size: 1.2em
+            }
+
+            p {
+                line-height: 1.5rem
+            }
+
+            ul {
+                padding: 0
+            }
+
+            .container {
+                display: block
+            }
+
+            .image-container {
+                display: none
+            }
+        }
+
+        @media only screen and (max-width:960px) {
+
+            footer,
+            main {
+                max-width: 100vw;
+                padding: 40px
+            }
+        }
+
+        :root {
+            --background-color: #fff;
+            --text-color: #1d1d1d
+        }
+
+        .logo {
+            filter: invert(0)
+        }
+
+        @media (prefers-color-scheme:dark) {
+            :root {
+                --background-color: #000000;
+                --text-color: #f8f9fa
+            }
+
+            .logo {
+                filter: invert(1)
+            }
+        }
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N1RZPMWQWE"></script>
+    <script>function gtag() { dataLayer.push(arguments) } window.dataLayer = window.dataLayer || [], gtag("js", new Date), gtag("config", "G-N1RZPMWQWE")</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+    <nav class="main-nav"><a class="nav-home" href="/"><img class="logo"
+                src="/assets/images/logo/wassim-chegham-logo.svg" alt="Amy Ollomani logo" width="185" height="42">
+        </a><span class="flex-1"></span> <a class="nav-link" href="/">Home</a> <a class="nav-link"
+            href="/about">About</a> <a class="nav-link" href="/uses">Gears</a></nav>
+    <nav class="mobile-nav"><a class="nav-link" href="/"><img class="logo"
+                src="/assets/images/logo/wassim-chegham-logo.svg" alt="Amy Ollomani logo" width="185"
+                height="42"></a><input type="checkbox" id="overlay-input"> <label for="overlay-input"
+            class="overlay-button"><span></span></label>
+        <div class="overlay">
+            <nav><a class="nav-link" href="/">Home</a> <a class="nav-link" href="/about">About</a> <a class="nav-link"
+                    href="/uses">Gears</a><a rel="me" target="__blank" href="https://github.com/amyollomani1"
+                    title="GitHub">GitHub</a><a rel="me" target="__blank" href="https://twitter.com/manekinekko"
+                    title="Twitter">Twitter</a><a rel="me" target="__blank" href="https://dev.to/wassimchegham"
+                    title="Blog">Blog</a><a rel="me" target="__blank" href="https://slides.com/wassimchegham"
+                    title="Talks">Talks</a><a rel="me" target="__blank"
+                    href="https://www.linkedin.com/in/wassimchegham/" title="LinkedIn">LinkedIn</a><a rel="me"
+                    target="__blank" href="https://www.bonfire.com/store/wassim-chegham/" title="Shop">Shop</a></nav>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="text-container">
+                <div class="author-container">
+                    <h1 class="author">Amy Ollomani</h1>
+                    <div class="role">Amy is a software developer working on creating new games and websites. Amy loves learning about Cloud technologies and Machine learning, as well as building applications which support the user's experience.
+                    </div>
+                </div>
+            </div>
+            <div class="image-container">
+                <div class="hero-image">
+                    <picture>
+                        <source type="image/webp" srcset="/assets/images/wassim-chegham-580x580.webp">
+                        <source type="image/png" srcset="/assets/images/wassim-chegham-580x580.png"><img
+                            src="/assets/images/wassim-chegham-580x580.png" width="290" height="290"
+                            alt="Amy Ollomani Profile">
+                    </picture>
+                </div>
+            </div>
+        </div>
+        <section class="projects">
+            <h2>Featured Projects and Content</h2>
+            <ul>
+                <li><a href="https://github.com/nodejs/node/commit/016749ba5d"
+                        title="LL(k) Parser for TAP stream in Node.js">
+                        <h3>LL(k) Parser for TAP stream in Node.js</h3>
+                    </a>
+                    <p>I implemented a complete handwritten LL(1) parser that parses and transforms the TAP output
+                        stream in Node.js&#39;s test runner.</p>
+                </li>
+                <li><a href="https://www.youtube.com/watch?v=bd159jmJfGE"
+                        title="World&#39;s 1st Brain-Controlled coffee machine">
+                        <h3>World&#39;s 1st Brain-Controlled coffee machine</h3>
+                    </a>
+                    <p>This is the world&#39;s 1st Brain-Controlled coffee machine (working proof of concept). It is a
+                        coffee machine that can be controlled by a brain. It is a proof of concept, but it is also a
+                        real world example of how a machine can be controlled by a brain, by people with disabilities.
+                    </p>
+                </li>
+                <li><a href="https://azure.github.io/static-web-apps-cli/" title="Azure Static Web Apps CLI">
+                        <h3>Azure Static Web Apps CLI</h3>
+                    </a>
+                    <p>The official Azure Static Web Apps CLI.</p>
+                </li>
+                <li><a href="https://twitter.com/manekinekko/status/1281704000572858375"
+                        title="What happens when you type an URL in an address bar">
+                        <h3>What happens when you type an URL in an address bar</h3>
+                    </a>
+                    <p>A sketch that went viral providing a high level explanation about what happens when you type an
+                        URL in an address bar in a Web browser.</p>
+                </li>
+                <li><a href="https://twitter.com/manekinekko/status/855824609299636230"
+                        title="Understanding async/await in 7 seconds">
+                        <h3>Understanding async/await in 7 seconds</h3>
+                    </a>
+                    <p>A tweet that went viral providing a simple explanation how async/await works in JavaScript, in 7
+                        seconds.</p>
+                </li>
+                <li><a href="https://dev.to/wassimchegham/my-remote-office-tour-2019-edition-2kb9"
+                        title="My Remote Office Tour: 2021 Upgrade Edition!">
+                        <h3>My Remote Office Tour: 2021 Upgrade Edition!</h3>
+                    </a>
+                    <p>Sharing my journey into building my desk for my remote office with all the links to equipments
+                        and tips-tricks for the cable management part, and more.</p>
+                </li>
+                <li><a href="https://dev.to/wassimchegham/the-subtle-art-of-being-a-developer-advocate-gdg"
+                        title="The Subtle Art of Being A Developer Advocate!">
+                        <h3>The Subtle Art of Being A Developer Advocate!</h3>
+                    </a>
+                    <p>A reference explanation of Developer Advocacy and DevRel.</p>
+                </li>
+                <li><a href="https://dev.to/angular/the-web-bluetooth-module-for-angular-314b"
+                        title="The missing Web Bluetooth module for Angular">
+                        <h3>The missing Web Bluetooth module for Angular</h3>
+                    </a>
+                    <p>The Web Bluetooth module for Angular enables Angular developers to use the Web Bluetooth API to
+                        interact with Bluetooth devices, directly from an Angular application.</p>
+                </li>
+                <li><a href="https://dev.to/wassimchegham/hey-google-set-my-desk-to-standingmode-ai6"
+                        title="Hey Google, set my desk to standing mode!">
+                        <h3>Hey Google, set my desk to standing mode!</h3>
+                    </a>
+                    <p>What if you could use the Google Assistant to control your standing desk?</p>
+                </li>
+                <li><a href="https://dorian-tested-appliance.glitch.me/" title="Game Boy in pure CSS">
+                        <h3>Game Boy in pure CSS</h3>
+                    </a>
+                    <p>The Nintendo Game Boy built only with CSS 🔥</p>
+                </li>
+                <li><a href="https://photobooth.wassim.dev/" title="Web Photobooth">
+                        <h3>Web Photobooth</h3>
+                    </a>
+                    <p>An online photobooth app, with 25+ filters (using WebGl and Shaders). It also uses machine
+                        learning and Neural Style Transfer for even more awesome effects!</p>
+                </li>
+                <li><a href="https://hexa.run/" title="Hexa CLI for Azure: Deploy in seconds">
+                        <h3>Hexa CLI for Azure: Deploy in seconds</h3>
+                    </a>
+                    <p>The ultimate companion for the Azure CLI. Setup and deploy in seconds.</p>
+                </li>
+                <li><a href="https://marketplace.visualstudio.com/items?itemName=wassimdev.windows-nt-vscode-theme&amp;ssr=true"
+                        title="Windows NT/2000 Theme for VS Code">
+                        <h3>Windows NT/2000 Theme for VS Code</h3>
+                    </a>
+                    <p>A Windows NT/2000 theme for VS Code. For nostalgic people.</p>
+                </li>
+                <li><a href="https://xlayers.dev/" title="xLayers: Automated code generation for The Web">
+                        <h3>xLayers: Automated code generation for The Web</h3>
+                    </a>
+                    <p>xLayers is a community-driven effort to bridge the gap between designers, who implement the UI
+                        sketch and developers who implement the code from these design sketches. Put simply, xLayers is
+                        a code generation tool for your design sketches: use xLayers to instantly scaffold your
+                        components out of your design.</p>
+                </li>
+                <li><a href="https://ngx.tools/" title="Angular package repository">
+                        <h3>Angular package repository</h3>
+                    </a>
+                    <p>An Angular package repository built on top of npm registry. It provides a way to search for
+                        Angular packages, libraries and schematics. It uses Algolia as a search engine. Project
+                        sponsored by Algolia.</p>
+                </li>
+                <li><a href="https://www.catsify.app/" title="Choose a unique and creative cat&#39;s name">
+                        <h3>Choose a unique and creative cat&#39;s name</h3>
+                    </a>
+                    <p>A fun app to help you choose a unique and creative cat&#39;s name. The API is Built with Rust,
+                        compiled into WASM and runs on top of Node.js in a serverless environment.</p>
+                </li>
+                <li><a href="https://hueaction.dev/" title="Philips Hue meets Github Actions">
+                        <h3>Philips Hue meets Github Actions</h3>
+                    </a>
+                    <p>Github Action: Trigger your Philips Hue lights from your Github workflow. Plug this action into
+                        your workflow and you can trigger your lights based on the state of your GitHub builds.</p>
+                </li>
+                <li><a href="https://github.com/amyollomani1/angular-screen-lock/"
+                        title="Android Screen Lock in Angular">
+                        <h3>Android Screen Lock in Angular</h3>
+                    </a>
+                    <p>Android Screen Lock ported to Web using Angular.</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <nav><a class="nav-link" href="/">Home</a> <a class="nav-link" href="/about">About</a> <a class="nav-link"
+                    href="/uses">Uses</a> <span class="flex-1"></span><a rel="me" class="nav-link" target="__blank"
+                    href="https://github.com/amyollomani1" title="GitHub">GitHub</a><a rel="me" class="nav-link"
+                    target="__blank" href="https://twitter.com/manekinekko" title="Twitter">Twitter</a><a rel="me"
+                    class="nav-link" target="__blank" href="https://dev.to/wassimchegham" title="Blog">Blog</a><a
+                    rel="me" class="nav-link" target="__blank" href="https://slides.com/wassimchegham"
+                    title="Talks">Talks</a><a rel="me" class="nav-link" target="__blank"
+                    href="https://www.linkedin.com/in/wassimchegham/" title="LinkedIn">LinkedIn</a><a rel="me"
+                    class="nav-link" target="__blank" href="https://www.youtube.com/wassimchegham"
+                    title="YouTube">YouTube</a><a rel="me" class="nav-link" target="__blank"
+                    href="https://www.bonfire.com/store/wassim-chegham/" title="Shop">Shop</a></nav>
+        </div>
+        <p class="credits"><small>Designed & built by Amy Ollomani</small> <img class="logo"
+                src="/assets/images/logo/wassim-chegham-logo.svg" alt="Amy Ollomani logo" width="185" height="42"></p>
+    </footer>
+</body>
+<meta name="build:hash" content="dfbaebe">
+<meta name="build:url" content="https://github.com/amyollomani1/portfolio/commit/dfbaebe">
+
+</html>
